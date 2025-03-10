@@ -1,0 +1,214 @@
+@media screen and (min-width:1200px) {
+  .all-products-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .inp{
+    width: 25vw;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .in-cont{
+    display: flex;
+    flex-direction: row;
+  }
+  .srch-btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 2px;
+    border-width: 0px;
+    cursor: pointer;
+    background-color: #ffb233;
+    color: #fff;
+    margin-right: 10px;
+  }
+  .sel{
+    height: 40px;
+  }
+  .para{
+    background-color: #3396ff;
+    color: #fff;
+    height: 4vh;
+    width: 20vw;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    width: 70vw;
+    align-items: center;
+  }
+  
+  .no-products-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 64px;
+    margin-top: 48px;
+  }
+  .no-products-img {
+    width: 250px;
+    height: 180px;
+  }
+  .no-products-heading {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3px;
+  }
+  .no-products-description {
+    text-align: center;
+    color: #64748b;
+    font-family: 'Roboto';
+    font-size: 14px;
+    width: 90%;
+    max-width: 288px;
+    line-height: 1.3;
+  }
+  
+  .products-error-view-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    padding-bottom: 64px;
+  }
+  
+  .products-failure-img {
+    width: 250px;
+    height: 200px;
+  }
+  .product-failure-heading-text {
+    color: #171f46;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  
+  .products-failure-description {
+    text-align: center;
+    color: #64748b;
+    font-family: 'Roboto';
+    font-size: 14px;
+    width: 90%;
+    max-width: 288px;
+    line-height: 1.3;
+  }
+  
+  .products-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .all-products-container {
+    margin-left: 30px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+  @media screen and (max-width: 900px) {
+    .all-products-section {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 100px;
+    }
+    .inp{
+      width: 55vw;
+      height: 30px;
+      margin: 10px;
+    }
+    .in-cont{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+    }
+    .srch-btn{
+      height: 30px;
+      width: 100px;
+      border-radius: 2px;
+      border-width: 0px;
+      cursor: pointer;
+      background-color: #ffb233;
+      color: #fff;
+      margin: 10px;
+     
+    }
+    .sel{
+      height: 30px;
+    }
+    .para{
+      background-color: #3396ff;
+      color: #fff;
+      height: 3vh;
+      width: 75vw;
+      text-align: center;
+      border-radius: 20px;
+    }
+    .all-products-container {
+      margin-left: 30px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .no-products-view {
+      margin-left: 30px;
+      width: 70%;
+      padding-bottom: 0;
+      margin-top: 0px;
+    }
+    .no-products-img {
+      width: 459px;
+      height: 315px;
+    }
+    .no-products-heading {
+      margin-top: 32px;
+      font-size: 24px;
+    }
+    .no-products-description {
+      margin-top: 12px;
+      font-size: 18px;
+      width: 60%;
+      max-width: 466px;
+    }
+    .products-error-view-container {
+      margin-top: 0px;
+      margin-left: 30px;
+      width: 70%;
+      padding-bottom: 0;
+    }
+    .products-failure-img {
+      width: 400px;
+      height: 350px;
+    }
+    .product-failure-heading-text {
+      font-size: 24px;
+    }
+    .products-failure-description {
+      font-size: 18px;
+      width: 60%;
+      max-width: 466px;
+    }
+    .products-loader-container {
+      width: 70%;
+    }
+  }
+  
+  
+ 
