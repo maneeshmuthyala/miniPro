@@ -1,14 +1,14 @@
-import {Link} from 'react-router-dom'
-
+import {Link, withRouter} from 'react-router-dom'
+import Cookies from 'js-cookie'
 import './index.css'
 
 const Header = props => {
-//   const onClickLogout = () => {
-//     const {history} = props
+  const onClickLogout = () => {
+    const {history} = props
 
-//     Cookies.remove('jwt_token')
-//     history.replace('/login')
-//   }
+    Cookies.remove('jwt_token')
+    history.replace('/login')
+  }
 
 
 
@@ -19,7 +19,6 @@ const Header = props => {
           <Link to="/">
           <h1>Uniq</h1>
           </Link>
-
           <button
             type="button"
             className="nav-mobile-btn"
@@ -50,13 +49,15 @@ const Header = props => {
             </li>
             <li className="nav-menu-item">
             </li>
-          </ul>
-          <button
+            <li className='nav-menu-item'><button
             type="button"
             className="logout-desktop-btn"
+            onClick={onClickLogout}
           >
             Logout
-          </button>
+          </button></li>
+          </ul>
+          
         </div>
       </div>
       <div className="nav-menu-mobile">
@@ -96,4 +97,4 @@ const Header = props => {
   )
 }
 
-export default Header
+export default withRouter(Header)

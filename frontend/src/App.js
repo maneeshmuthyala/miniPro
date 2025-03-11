@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
     <Switch>
+    <Route path="/login" component={Loginpage } />
       <Route exact path="/" component={Home} />
-      <Route path="/login" component={Loginpage } />
       <Route path="/about-us" component={Aboutus } />
       <Route path="/about_movie/:id" component={AboutMovie} />
       <Route path="/theatres" component={Theatres } />
