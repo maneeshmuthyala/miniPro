@@ -1,34 +1,138 @@
-.view-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 90vh;
-    width: 90vw;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.seat{
-    height: 25px;
-    width: 30px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #0000;
-    background-color:#c0e3e3;
-    margin: 10px;
+.seat-booking-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .show-times {
+    margin: 20px;
+  }
+  
+  .show-times button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 2px;
+    background: #eee;
+  }
+  
+  .show-times .selected-time {
+    background: green;
+    color: white;
+  }
+  
+  .screen {
+    background: lightblue;
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 6px;
+  }
+  
+  .seat-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .row-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .seat {
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    border: 1px solid #000;
+    border-radius: 4px;
     text-align: center;
-}
-.screen{
-    background-color: #00ee;
-    width: 50vw;
-    align-self: center;
-    color: #fff;
-    margin-left: 50vh;
-    text-align: center;
-    margin-top: 30px;
-}
-.seat:hover {
-    background-color: #3498db;  
-    color: white;  
-}
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .available {
+    background: white;
+  }
+  
+  .selected {
+    background: green;
+    color: white;
+  }
+  
+  .sold {
+    background: lightgray;
+    cursor: not-allowed;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 5px;
+  }
+  
+  .available-box {
+    background: white;
+  }
+  
+  .selected-box {
+    background: green;
+  }
+  
+  .sold-box {
+    background: lightgray;
+  }
+  
+  .payment-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: 50%;
+    margin: auto;
+    border-radius: 6px;
+    background: #f9f9f9;
+  }
+  
+  .payment-summary h3 {
+    margin-bottom: 10px;
+  }
+  
+  .payment-summary p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .checkout-button {
+    padding: 10px;
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .checkout-button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  

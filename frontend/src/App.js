@@ -6,6 +6,7 @@ import AboutMovie from './components/AboutMovie'
 import Loginpage from './components/Loginpage';
 import Theatres from './components/Theatres';
 import Tview from './components/Tview';
+import Booking from './components/Booking';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/about_movie/:id" component={AboutMovie} />
       <Route path="/theatres" component={Theatres } />
       <Route path="/tview" component={Tview } />
+      <Route path="/booking" component={Booking } />
     </Switch>
   </Router>
   );
