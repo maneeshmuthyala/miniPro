@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mysql = require("mysql");
-const bcrypt = require("bcrypt");
 app.use(cors());
 app.use(express.json());
 
@@ -109,7 +108,32 @@ app.get("/search", (req, res) => {
     });
 });
 
-
+// Signup Route (With 3-Second Delay)
+app.post('/signup', (req, res) => {
+    const { email, password } = req.body;
+  
+    // Check if email exists
+    db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
+      if (err) return res.status(500).json({ message: 'Database error' });
+  
+      if (results.length > 0) {
+        return res.status(400).json({ message: 'Email already exists' });
+      }
+  
+      // Store user with plain text password (Not Secure)
+      db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, password], (err, result) => {
+        if (err) return res.status(500).json({ message: 'Database error' });
+  
+        // Generate JWT token
+  
+        // 3-Second Delay Before Response
+        setTimeout(() => {
+          res.status(201).json({ message: 'User signup successful!' });
+        }, 3000); // 3000ms = 3 seconds
+      });
+    });
+  });
+  
 // Start the server
 app.listen(8081, () => {
     console.log("Server is listening on port 8081");

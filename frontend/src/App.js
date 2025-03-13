@@ -7,18 +7,21 @@ import Loginpage from './components/Loginpage';
 import Theatres from './components/Theatres';
 import Tview from './components/Tview';
 import Booking from './components/Booking';
+import ProtectedRoute from './components/ProtectedRoute'
+import Signuppage from './components/Signuppage'
 
 function App() {
   return (
     <Router>
     <Switch>
     <Route path="/login" component={Loginpage } />
-      <Route exact path="/" component={Home} />
-      <Route path="/about-us" component={Aboutus } />
-      <Route path="/about_movie/:id" component={AboutMovie} />
-      <Route path="/theatres" component={Theatres } />
-      <Route path="/tview" component={Tview } />
-      <Route path="/booking" component={Booking } />
+    <Route path="/signup" component={Signuppage } />
+      <ProtectedRoute exact path="/" component={Home} />
+      <ProtectedRoute path="/about-us" component={Aboutus } />
+      <ProtectedRoute path="/about_movie/:id" component={AboutMovie} />
+      <ProtectedRoute path="/theatres" component={Theatres } />
+      <ProtectedRoute path="/tview" component={Tview } />
+      <ProtectedRoute path="/booking" component={Booking } />
     </Switch>
   </Router>
   );

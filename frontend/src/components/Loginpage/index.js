@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cookies from 'js-cookie';
-import { Redirect } from 'react-router-dom';
+import { Redirect ,Link} from 'react-router-dom';
 import './index.css';
 
 class Loginpage extends Component {
@@ -146,9 +146,11 @@ class Loginpage extends Component {
           <button type="submit" className="login-button">
             SignIn
           </button>
-          <button type="submit" className="login-button">
+          <Link to="/signup">
+          <button type="button" className="login-button">
             SignUp
           </button>
+          </Link>
           </div>
           
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
